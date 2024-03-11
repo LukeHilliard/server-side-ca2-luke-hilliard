@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Content extends Migration
+class AddContentToPostsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class Content extends Migration
     public function up()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->string('content');
+            $table->longText('content');
         });
     }
 
@@ -26,7 +26,7 @@ class Content extends Migration
     public function down()
     {
         Schema::table('posts', function (Blueprint $table) {
-            //
+            $table->dropColumn('content');
         });
     }
 }
