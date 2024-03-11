@@ -45,6 +45,7 @@ class PostsController extends Controller
         $request->validate([
             'title' => 'required',
             'description' => 'required',
+            'content' => 'required',
             'image' => 'required|mimes:jpg,png,jpeg|max:5048'
         ]);
 
@@ -55,6 +56,7 @@ class PostsController extends Controller
         Post::create([
             'title' => $request->input('title'),
             'description' => $request->input('description'),
+            'content' =>$request->input('content'),
             'slug' => SlugService::createSlug(Post::class, 'slug', $request->title),
             'image_path' => $newImageName,
             'user_id' => auth()->user()->id
