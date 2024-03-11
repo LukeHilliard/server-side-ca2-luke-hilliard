@@ -16,6 +16,8 @@
                         Blog
                     </a>
                 </li>
+
+                @guest
                 <li class="pb-1">
                     <a href="/login">
                         Login
@@ -26,8 +28,10 @@
                         Register
                     </a>
                 </li>
+                @endguest
             </ul>
         </div>
+        
 
         <div>
             <h3 class="text-l sm:font-bold text-white">
