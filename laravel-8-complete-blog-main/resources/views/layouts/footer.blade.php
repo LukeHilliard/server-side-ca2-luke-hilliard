@@ -84,12 +84,6 @@
                         Will Audi dominate in 2028?
                     </a>
                 </li>
-                <li class="pb-1">
-                    <a href="/">
-
-                        TODO
-                    </a>
-                </li>
             </ul>
         </div>
     </div>

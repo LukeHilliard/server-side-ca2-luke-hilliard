@@ -19,10 +19,11 @@
     <div id="app">
         <header class="bg-red-600 py-6">
             <div class="container mx-auto flex justify-between items-center px-6">
-                <div>
-                    <a href="{{ url('/') }}" class="text-lg font-semibold text-gray-100 no-underline">
-                        Formula 1
+                <div class="flex flex-row">
+                    <a href="{{ url('/') }}" class="text-lg font-semibold text-white no-underline">
+                        <img src="https://www.shutterstock.com/image-vector/fi-icon-logo-vector-red-260nw-2181273531.jpg" atl="Formula 1 Logo" class="h-14 w-auto mr-2"/>
                     </a>
+
                 </div>
                 <nav class="space-x-4 text-gray-300 text-sm sm:text-base">
                     <a class="no-underline hover:underline" href="/">Home</a>
