@@ -18,7 +18,7 @@
 
     <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
         <div>
-            <img src="https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_960_720.jpg" width="700" alt="">
+            <img src="https://www.racefans.net/wp-content/uploads/2021/12/racefansdotnet-21-12-12-13-44-06-27.jpg" width="700" alt="">
         </div>
 
         <div class="m-auto sm:m-auto text-left w-4/5 block">
@@ -41,7 +41,7 @@
         </div>
     </div>
 
-    <div class="text-center p-15 bg-black text-white">
+    <div class="text-center p-15 bg-red-600 text-white">
         <h2 class="text-2xl pb-5 text-l">
             I'm an expert in...
         </h2>
@@ -61,11 +61,7 @@
     </div>
 
     <div class="text-center py-15">
-        <span class="uppercase text-s text-gray-400">
-            Blog
-        </span>
-
-        <h2 class="text-4xl font-bold py-10">
+        <h2 class="text-4xl font-bold py-4">
             Recent Posts
         </h2>
 
@@ -90,8 +86,6 @@
                         Delve into the intricacies of pit stop strategies in Formula 1 racing. Learn how teams meticulously plan and execute pit stops to gain crucial time on the track and gain an edge over their rivals. From tire changes to refueling tactics, uncover the secrets behind one of the most critical aspects of motorsport.
                     </p>
                 </div>
-
-
                 <a
                     href=""
                     class="uppercase bg-transparent border-2 border-gray-100 text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl">
