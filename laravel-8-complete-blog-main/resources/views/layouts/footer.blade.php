@@ -76,7 +76,7 @@
                 </li>
                 <li class="pb-1">
                     <a href="/">
-                        Verstappens Red Bull Reign
+                        Verstappen Red Bull Reign
                     </a>
                 </li>
                 <li class="pb-1">
@@ -86,7 +86,7 @@
                 </li>
                 <li class="pb-1">
                     <a href="/">
-                    
+
                         TODO
                     </a>
                 </li>
