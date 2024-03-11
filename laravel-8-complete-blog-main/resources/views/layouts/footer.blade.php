@@ -65,23 +65,29 @@
 
             <ul class="py-4 sm:text-s pt-4 text-white">
                 <li class="pb-1">
-                    <a href="/">
+                    <a href="{{ url('blog/the-thrill-of-the-track-exploring-our-passion-for-formula-1-racing') }}">
                         Why we love F1
                     </a>
                 </li>
                 <li class="pb-1">
-                    <a href="/">
+                    <a href="{{ url('blog/controversy-in-abu-dhabi-2021-hamilton-vs-verstappen') }}">
                         Was Hamilton robbed?
                     </a>
                 </li>
                 <li class="pb-1">
-                    <a href="/">
+                    <a href="{{ url('blog/verstappen-s-reign-at-red-bull-racing-a-formula-1-phenomenon-2') }}">
                         Verstappen Red Bull Reign
                     </a>
                 </li>
                 <li class="pb-1">
-                    <a href="/">
+                    <a href="{{ url('blog/audi-s-entrance-to-formula-1-a-game-changer-in-the-making') }}">
                         Will Audi dominate in 2028?
+                    </a>
+                </li>
+
+                <li class="pb-1">
+                    <a href="{{ url('blog/unraveling-the-strategies-inside-the-pit-stop-dynamics-in-formula-1') }}">
+                       The pit crew
                     </a>
                 </li>
             </ul>

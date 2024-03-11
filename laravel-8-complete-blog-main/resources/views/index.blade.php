@@ -8,7 +8,7 @@
                     Can't keep up with this season's drama?
                 </h1>
                 <a
-                    href="/blog"
+                    href="{{ url('blog/') }}"
                     class="text-center bg-gray-50 text-gray-700 py-2 px-4 font-bold text-xl uppercase">
                     Read More
                 </a>
@@ -34,7 +34,7 @@
                 Hamilton, known for his strategic prowess and Verstappen, hailed as the young prodigy, clashed on the Yas Marina Circuit in a nail-biting finale.</p>
 
             <a
-                href="/blog"
+                href="{{ url('blog/controversy-in-abu-dhabi-2021-hamilton-vs-verstappen') }}"
                 class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
                 Find Out More
             </a>
@@ -87,14 +87,14 @@
                     </p>
                 </div>
                 <a
-                    href=""
+                    href="blog/unraveling-the-strategies-inside-the-pit-stop-dynamics-in-formula-1"
                     class="uppercase bg-transparent border-2 border-gray-100 text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl">
                     Find Out More
                 </a>
             </div>
         </div>
         <div>
-            <img src="https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_960_720.jpg" alt="">
+            <img src="https://media.istockphoto.com/id/166272854/photo/racing-team-working-at-pit-stop.jpg?s=612x612&w=0&k=20&c=QDpTVjRXwM633e8SuQR8fdyH3raNwKNVSndQ_sqHf-U=" width="700" alt="">
         </div>
     </div>
 @endsection
