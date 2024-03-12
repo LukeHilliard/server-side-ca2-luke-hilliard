@@ -93,8 +93,8 @@
                 </a>
             </div>
         </div>
-        <div>
-            <img src="https://media.istockphoto.com/id/166272854/photo/racing-team-working-at-pit-stop.jpg?s=612x612&w=0&k=20&c=QDpTVjRXwM633e8SuQR8fdyH3raNwKNVSndQ_sqHf-U=" width="700" alt="">
+        <div class="py-8">
+            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzRzN3g5dXY1Mm9kOWI1ZTdwNDB5OGFoaTh0MTk1dHVubHA0M2dldCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/HPZKgoc65LUMhIVo6V/giphy.gif" width="900" alt="">
         </div>
     </div>
 @endsection

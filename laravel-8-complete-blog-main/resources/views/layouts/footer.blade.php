@@ -18,20 +18,20 @@
                 </li>
 
                 @guest
-                <li class="pb-1">
-                    <a href="/login">
-                        Login
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/register">
-                        Register
-                    </a>
-                </li>
+                    <li class="pb-1">
+                        <a href="/login">
+                            Login
+                        </a>
+                    </li>
+                    <li class="pb-1">
+                        <a href="/register">
+                            Register
+                        </a>
+                    </li>
                 @endguest
             </ul>
         </div>
-        
+
 
         <div>
             <h3 class="text-l sm:font-bold text-white">
