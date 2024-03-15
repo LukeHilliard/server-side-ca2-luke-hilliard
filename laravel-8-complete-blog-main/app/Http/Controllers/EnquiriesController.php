@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Enquiry;
+use App\Models\Message;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -30,36 +31,30 @@ class EnquiriesController extends Controller
 
     }
 
-    public function store(Request $request) {
+    public function store(Request $request): \Illuminate\Http\RedirectResponse
+    {
 
         // validate incoming request
         $request->validate([
-            'title' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
-            'message' => 'required|string',
+            'title' => 'required',
+            'email' => 'required',
+            'message' => 'required',
             'is_urgent' => 'nullable|boolean',
+            'first_name' => 'required',
+            'last_name' => 'required'
         ]);
 
         // create a new enquiry
-        $enquiry = new Enquiry();
-        $enquiry->title = $request->title;
-        $enquiry->email = $request->email;
-        $enquiry->message = $request->message;
-        $enquiry->is_urgent = $request->has('is_urgent');
-        $enquiry->save();
+        Enquiry::create([
+            'title'=> $request->input('title'),
+            'email'=> $request->input('email'),
+            'message'=> $request->input('message'),
+            'is_urgent'=> $request->input('is_urgent'),
+            'first_name'=> $request->input('first_name'),
+            'last_name'=> $request->input('last_name'),
+        ]);
 
-        // retrieve the post
-        $postId = $request->input('post_id');
-        $post = Post::findOrFail($postId);
-
-        // get the user who made the post
-        $user = $post->user;
-
-        // append enquiry to the messages column of that user
-        $user->messages .= "\n\nEnquiry Title: {$enquiry->title}\nFrom: {$enquiry->email}\nMessage: {$enquiry->message}";
-        $user->save();
-
-        return redirect()->route('enquiries.index')
+        return redirect()->route('blog.index')
         ->with('success', 'Enquiry sent successfully');
     }
 
