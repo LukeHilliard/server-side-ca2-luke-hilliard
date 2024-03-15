@@ -6,12 +6,14 @@
     <a
         href="/blog/create"
         class="bg-blue-500 uppercase bg-transparent text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl">
-        Make enquiry
+        Enquire
     </a>
 </div>
 @endif
 
-<div class="w-4/5 m-auto pt-20">
+<div class="w-4/5 m-auto pt-5">
+    <h1 class="text-3xl font-semibold">Enquire about "{{ $post->title }}"</h1>
+    <p class="text-gray-500">By {{ $post->user->name }}</p>
     <form
         action="/blog"
         method="POST"

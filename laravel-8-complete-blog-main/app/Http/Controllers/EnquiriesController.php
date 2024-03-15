@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Enquiry;
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class EnquiriesController extends Controller
@@ -18,8 +19,14 @@ class EnquiriesController extends Controller
         return view('enquiries.index', $data);
     }
 
-    public function create() {
-        return view('enquiries.create');
+    public function create(Request $request) {
+        // Get post id from url parameters
+        $postId = $request->input('post_id');
+
+        // Retrieve the post and its user
+        $post = Post::with('user')->findOrFail($postId);
+
+        return view('enquiries.create', compact('post'));
 
     }
 
