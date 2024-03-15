@@ -61,7 +61,7 @@
                         Edit
                     </a>
                 </span>
-                
+
 
                 <span class="float-right">
                     <form
@@ -72,7 +72,7 @@
 
                         <!-- Taken from https://uiverse.io/seyed-mohsen-mousavi/warm-dingo-23 -->
                         <button
-                                class="inline-flex items-center px-4 py-2 bg-red-600 transition ease-in-out delay-75 hover:bg-red-700 text-white text-sm font-medium rounded-md hover:-translate-y-1 hover:scale-110"
+                                class="inline-flex items-center px-4 py-2 bg-red-600 transition ease-in-out delay-75 hover:bg-red-700 text-white text-sm font-medium rounded-md hover:-translate-y-1 hover:scale-110 mr-3"
                                 type="submit"
                         >
                           <svg

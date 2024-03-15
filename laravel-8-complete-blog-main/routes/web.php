@@ -17,6 +17,10 @@ use App\Http\Controllers\EnquiriesController;
 */
 
 Route::get('/', [PagesController::class, 'index']);
+Route::get('/about', function () {
+    return view('about');
+});
+
 
 Route::resource('/blog', PostsController::class);
 
