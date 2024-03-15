@@ -31,6 +31,16 @@ class EnquiriesController extends Controller
     }
 
     public function store(Request $request) {
+
+        // validate incoming request
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'message' => 'required|string',
+            'is_urgent' => 'nullable|boolean',
+        ]);
+
+        // create a new enquiry
         $enquiry = new Enquiry();
         $enquiry->title = $request->title;
         $enquiry->email = $request->email;
@@ -38,8 +48,19 @@ class EnquiriesController extends Controller
         $enquiry->is_urgent = $request->has('is_urgent');
         $enquiry->save();
 
+        // retrieve the post
+        $postId = $request->input('post_id');
+        $post = Post::findOrFail($postId);
+
+        // get the user who made the post
+        $user = $post->user;
+
+        // append enquiry to the messages column of that user
+        $user->messages .= "\n\nEnquiry Title: {$enquiry->title}\nFrom: {$enquiry->email}\nMessage: {$enquiry->message}";
+        $user->save();
+
         return redirect()->route('enquiries.index')
-        ->with('success');
+        ->with('success', 'Enquiry sent successfully');
     }
 
 
