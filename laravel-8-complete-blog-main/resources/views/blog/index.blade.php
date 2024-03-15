@@ -19,20 +19,17 @@
     </div>
 @endif
 
-@if (Auth::check())
-    <div class="pt-15 w-4/5 m-auto">
-        <a
-            href="/blog/create"
-            class="bg-blue-500 uppercase bg-transparent text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl">
-            Create post
-        </a>
-    </div>
-@endif
+
 
 <div class="slideshow-container">
     @foreach ($posts as $index => $post)
     <div class="mySlides fade">
-        <div class="numbertext">{{ $index + 1 }} / {{ count($posts) }}</div>
+        <div class="flex flex-row justify-center py-4">{{ $index + 1 }} / {{ count($posts) }}</div>
+        <!-- Next and previous buttons -->
+        <div class="flex flex-row justify-center gap-2 text-4xl">
+            <div class="cursor-pointer"><a class="" onclick="plusSlides(-1)">&#10094;</a></div>
+            <div class="cursor-pointer"><a class="" onclick="plusSlides(1)">&#10095;</a></div>
+        </div>
         <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
             <div>
                 <img src="{{ asset('images/' . $post->image_path) }}" alt="">
@@ -50,9 +47,11 @@
                     {{ $post->description }}
                 </p>
 
-                <a href="/blog/{{ $post->slug }}" class="uppercase bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
-                    Keep Reading
-                </a>
+                <div class="animate-bounce">
+                    <a href="/blog/{{ $post->slug }}" class="uppercase bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl ">
+                        Keep Reading
+                    </a>
+                </div>
 
                 @if (isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
                 <span class="float-right">
@@ -83,10 +82,6 @@
         </div>
     </div>
     @endforeach
-
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
 
 <!-- The dots/circles -->
@@ -95,6 +90,17 @@
     <span class="dot" onclick="currentSlide({{ $index + 1 }})"></span>
     @endforeach
 </div>
+
+@if (Auth::check())
+<div class="pt-15 w-4/5 m-auto">
+    Have your own news to share? 
+    <a
+        href="/blog/create"
+        class="bg-blue-500 uppercase bg-transparent text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl">
+        Create post
+    </a>
+</div>
+@endif
 
 <script>
     let slideIndex = 1;
@@ -114,6 +120,7 @@
         let dots = document.getElementsByClassName("dot");
         if (n > slides.length) {slideIndex = 1}
         if (n < 1) {slideIndex = slides.length}
+
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
