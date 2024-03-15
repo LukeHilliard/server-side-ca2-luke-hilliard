@@ -31,7 +31,7 @@ class EnquiriesController extends Controller
 
     }
 
-    public function store(Request $request): \Illuminate\Http\RedirectResponse
+    public function store(Request $request)
     {
 
         // validate incoming request
