@@ -25,4 +25,5 @@ Auth::routes();
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('/enquires', EnquiriesController::class);
+Route::post('/enquiries', [EnquiriesController::class, 'store'])->name('enquiries.store');
 

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Enquiry;
+use App\Models\Message;
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class EnquiriesController extends Controller
@@ -18,21 +20,42 @@ class EnquiriesController extends Controller
         return view('enquiries.index', $data);
     }
 
-    public function create() {
-        return view('enquiries.create');
+    public function create(Request $request) {
+        // Get post id from url parameters
+        $postId = $request->input('post_id');
+
+        // Retrieve the post and its user
+        $post = Post::with('user')->findOrFail($postId);
+
+        return view('enquiries.create', compact('post'));
 
     }
 
-    public function store(Request $request) {
-        $enquiry = new Enquiry();
-        $enquiry->title = $request->title;
-        $enquiry->email = $request->email;
-        $enquiry->message = $request->message;
-        $enquiry->is_urgent = $request->has('is_urgent');
-        $enquiry->save();
+    public function store(Request $request): \Illuminate\Http\RedirectResponse
+    {
 
-        return redirect()->route('enquiries.index')
-        ->with('success');
+        // validate incoming request
+        $request->validate([
+            'title' => 'required',
+            'email' => 'required',
+            'message' => 'required',
+            'is_urgent' => 'nullable|boolean',
+            'first_name' => 'required',
+            'last_name' => 'required'
+        ]);
+
+        // create a new enquiry
+        Enquiry::create([
+            'title'=> $request->input('title'),
+            'email'=> $request->input('email'),
+            'message'=> $request->input('message'),
+            'is_urgent'=> $request->input('is_urgent'),
+            'first_name'=> $request->input('first_name'),
+            'last_name'=> $request->input('last_name'),
+        ]);
+
+        return redirect()->route('blog.index')
+        ->with('success', 'Enquiry sent successfully');
     }
 
 
