@@ -71,30 +71,31 @@
         </p>
     </div>
 
-    <div class="sm:grid grid-cols-2 w-4/5 m-auto">
-        <div class="flex bg-yellow-700 text-gray-100 pt-10">
-            <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block">
+<div class="sm:grid grid-cols-2 w-4/5 m-auto">
+    <div class="flex bg-yellow-700 text-gray-100 pt-10">
+        <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block">
                 <span class="uppercase text-xs">
                     Featured Article
                 </span>
 
-                <h3 class="text-xl font-bold py-5">
-                    Unraveling the Strategies: Inside the Pit Stop Dynamics in Formula 1
-                </h3>
-                <div class="py-5">
-                    <p>
-                        Delve into the intricacies of pit stop strategies in Formula 1 racing. Learn how teams meticulously plan and execute pit stops to gain crucial time on the track and gain an edge over their rivals. From tire changes to refueling tactics, uncover the secrets behind one of the most critical aspects of motorsport.
-                    </p>
-                </div>
-                <a
-                    href="blog/unraveling-the-strategies-inside-the-pit-stop-dynamics-in-formula-1"
-                    class="uppercase bg-transparent border-2 border-gray-100 text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl">
-                    Find Out More
-                </a>
+            <h3 class="text-xl font-bold py-5">
+                Unraveling the Strategies: Inside the Pit Stop Dynamics in Formula 1
+            </h3>
+            <div class="py-5">
+                <p>
+                    Delve into the intricacies of pit stop strategies in Formula 1 racing. Learn how teams meticulously plan and execute pit stops to gain crucial time on the track and gain an edge over their rivals. From tire changes to refueling tactics, uncover the secrets behind one of the most critical aspects of motorsport.
+                </p>
             </div>
-        </div>
-        <div class="py-8">
-            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzRzN3g5dXY1Mm9kOWI1ZTdwNDB5OGFoaTh0MTk1dHVubHA0M2dldCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/HPZKgoc65LUMhIVo6V/giphy.gif" width="900" alt="">
+            <a
+                href="blog/unraveling-the-strategies-inside-the-pit-stop-dynamics-in-formula-1"
+                class="uppercase bg-transparent border-2 border-gray-100 text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl">
+                Find Out More
+            </a>
         </div>
     </div>
+    <div class="py-8">
+        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzRzN3g5dXY1Mm9kOWI1ZTdwNDB5OGFoaTh0MTk1dHVubHA0M2dldCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/HPZKgoc65LUMhIVo6V/giphy.gif" width="900" alt="">
+    </div>
+</div>
+
 @endsection
